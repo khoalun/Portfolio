@@ -85,17 +85,20 @@ html {
 }
 
 body {
-    margin: 0 0 var(--header-height) 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
+    margin: 0 0 3rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .938rem;
     background-color: hsl(250, 60%, 99%);
     color: hsl(250, 8%, 45%);
 }
 
 h1,h2,h3,h4 {
     color: hsl(287, 100%, 50%);
-    font-weight: var(--font-semi-bold);
+    font-weight: bold;
 }
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
 ul {
     list-style: none;
 }
@@ -114,7 +117,7 @@ img {
 }
 
 .section__title {
-    font-size: var(--h1-font-size);
+    font-size: 2.25rem;
 }
  
 .section__subtitle{
@@ -148,9 +151,6 @@ img {
     background-color:hsl(250, 60%, 99%);
     z-index: 100;
 }
-
-/*==================== REUSABLE CSS CLASSES ====================*/
-
  
 /*==================== LAYOUT ====================*/
 
@@ -266,15 +266,14 @@ img {
 .home__social-icon {
     font-size: 1.25rem;
     color: hsl(250, 69%, 61%); ;
-}
+} 
 .home__social-icon:hover{
      color: hsl(250, 69%, 77%) ;
 }
 
-.home_blob {
+.home__blob {
     width: 200px;
-    fill:hsl(250, 69%, 61%);
-
+    fill:hsl(216, 50%, 40%);
 }
 
 .home__blob-img {
@@ -301,16 +300,16 @@ img {
 }
 
 .home__scroll {
-
+    display: none;
 }
 
 .home__scroll-button {
-    color: hsl(250, 69%, 61%);
-    transition: .3s;
+    color: hsl(216, 50%, 40%);
+    transition: .5s;
 }
 
 .home__scroll-button:hover {
-    transform: translateY(.25rem);
+    transform: translateY(0.25rem);
 }
 
 .home__scroll-mouse {
@@ -319,7 +318,7 @@ img {
 
 .home__scroll-name {
     font-size: small;
-    color:hsl(250, 69%, 61%) ;
+    color:hsl(216, 50%, 40%) ;
     font-weight: medium;
     margin-right: .25rem;
 }
@@ -348,16 +347,164 @@ img {
     transition: .3s;
 }  
 
-.button--flex{
+.button-flex{
     display: inline-flex;
     align-items:center ;
 }
 
 /*==================== ABOUT ====================*/
+.about__img {
+    width: 200px;
+    border-radius: .5rem;
+    /* justify-content: center;
+    align-self: center; */
+    margin: 0 auto;
+}
 
+.about__description {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+
+
+.about__info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+}
+
+.about__info-title {
+    font-size: 1.25rem;
+}
+.about__info-name {
+    font-size: smaller;
+    font-weight: 600;
+    color: black;
+}
+
+.about__info-title,
+.about__info-name {
+    display: block;
+    text-align: center;
+}
+
+.about__buttons{
+    display: flex;
+    justify-content: center;
+}
 
 /*==================== SKILLS ====================*/
 
+.skills__container {
+    row-gap: 0;
+}
+
+.skills__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem ;
+    cursor: pointer;
+}
+
+
+.skills__icon,
+.skills__arrow {
+    font-size: 2rem;
+     color:  hsl(250, 69%, 61%);
+}
+
+
+.skills__icon{
+    margin-right: 0.75rem;
+}
+
+.skills__subtitle {
+    font-size: small;
+    color: hsl(250, 8%, 65%); ;
+}
+
+.skills__arrow {
+    margin-left: auto;
+    transition: .4s;
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.skills__list {
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
+.skills__name {
+    font-size: normal;
+    font-weight: medium;
+}
+
+.skills__bar,
+.skills__percentage {
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills__bar {
+    background-color: hsl( 250 , 92%, 85%);;
+}
+
+.skills__percentage {
+    display: block;
+    background-color: hsl(250, 69%, 61%);;
+}
+
+.skills__html {
+    width: 90%;
+}
+
+.skills__css {
+    width: 80%;
+}
+
+.skills__react {
+    width: 60%;
+}
+
+.skills__javascript {
+        width: 60%;
+}
+
+.skills__node {
+        width: 50%;
+}
+
+.skills__firebase{
+        width: 20%;
+}
+
+.skills__python {
+        width: 20%;
+}
+
+.skills__figma {
+        width: 10%;
+}
+
+.skills__sketch {
+        width: 14%;
+}
+
+.skills__close .skills__list{
+    height: 0;
+    overflow: hidden;
+}
+
+.skills__open .skills__arrow {
+    transform: rotate(-180deg);
+
+}
 
 /*==================== QUALIFICATION ====================*/
 
